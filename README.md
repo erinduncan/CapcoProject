@@ -10,6 +10,6 @@ This application displays images that dynamically resize when hovered over, whil
 * TypeScript
 * CSS
 * AWS Amplify
-* Cypress
+* Cypress (Currently troubleshooting)
 
 # Moving Forward
