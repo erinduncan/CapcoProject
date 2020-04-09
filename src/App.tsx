@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Image from "./layout-components/Image";
 import { imageAPI } from "./utility/api";
-import Amplify, { Auth } from 'aws-amplify';
+import Amplify from 'aws-amplify';
 import awsmobile from './aws-exports';
 Amplify.configure(awsmobile);
 
