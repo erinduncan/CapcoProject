@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 import Image from "./layout-components/Image";
 import { imageAPI } from "./utility/api";
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
 
 /* This is the function to randomize the background color of each tile,
   once/if I switch to transparent pngs*/
