@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export class Image extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -26,6 +25,7 @@ export class Image extends React.Component<any, any> {
   render() {
     return (
       <div
+        data-test="main-content"
         id={this.props.id}
         className="images"
         onMouseEnter={() => this.onHover(this.props.id)}

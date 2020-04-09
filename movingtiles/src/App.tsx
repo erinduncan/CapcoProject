@@ -61,7 +61,7 @@ class AppComponent extends React.Component<any, any> {
 
   render() {
     return (
-      <div>
+      <div data-test="main-content">
         <div className="row">
           {this.state.row1.map((photo: any) => (
             <Image
