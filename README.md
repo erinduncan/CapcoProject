@@ -1,8 +1,10 @@
-## Capco Project
+# Capco Project
 
 This application displays images that dynamically resize when hovered over, while other images shift to fill the empty space.
 
-## Technologies
+[Moving Tiles Application](https://erin.d1t42uonzvpaf2.amplifyapp.com/)
+
+# Technologies
 
 * React
 * TypeScript
