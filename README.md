@@ -1,4 +1,4 @@
-# Capco Project
+# Dynamic Images Project
 
 This application displays images that dynamically resize and change color when hovered over, while the surrounding images shift to fill the empty space. 
 
