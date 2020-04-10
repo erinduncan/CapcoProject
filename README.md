@@ -1,4 +1,4 @@
-# Capco Project
+# Dynamic Images Project
 
 This application displays images that dynamically resize and change color when hovered over, while the surrounding images shift to fill the empty space. 
 
@@ -22,4 +22,6 @@ Images are obtained through an Axios request to a JSON file within the applicati
 * The application does not account for wrapping images from the left inward towards the hovered image. As a quick, hacky "fix" for this, I used a screenshot of the untouched, unhovered application as a background image, so at the very least there would be no "empty space." This, however, adds to the granularity of the application that makes it optimized (perhaps only) for a 1920 x 1080 display.
 * Some of the animations snap back to place rather than making a smooth transition; moving forward I would provide a few more keyframes that would account for several movement patterns.
 
-[!Cat](http://pngimg.com/uploads/cat/cat_PNG50526.png)
+<p align="center">
+<img src="http://pngimg.com/uploads/cat/cat_PNG50526.png"/>
+</p>
