@@ -6,21 +6,6 @@ import Amplify from 'aws-amplify';
 import awsmobile from './aws-exports';
 Amplify.configure(awsmobile);
 
-/* This is the function to randomize the background color of each tile,
-  once/if I switch to transparent pngs*/
-function RandomColor() {
-  let rc = "#";
-  for (let index = 0; index < 6; index++) {
-    rc += Math.floor(Math.random() * 16).toString(16);
-  }
-  return rc;
-}
-
-//eslint-disable-next-line
-const styles = {
-  backgroundColor: RandomColor(),
-};
-
 class AppComponent extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

@@ -10,9 +10,15 @@ as some of the photos from the API are portait rather than landscape*/
   overflow: hidden;
 }
 
+html {
+  background-image: url(./utility/lifehacks.png);
+  background-size: auto;
+  background-position: 1px;
+}
+
 /*container for images*/
 .row {
-  background-color: lightgray;
+  
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -21,10 +27,12 @@ as some of the photos from the API are portait rather than landscape*/
 }
 
 .images {
-  height: 25vh;
+  background-color: lightgray;
+  height: 24.788vh;
   width: 19vw;
   transition: 1s;
   animation-duration: 2s;
+  border: solid white 1px;
 }
 
 /* Hover animation */
@@ -32,7 +40,8 @@ as some of the photos from the API are portait rather than landscape*/
   animation-name: grow;
   animation-duration: 2s;
   height: 50vh;
-  width: 38vw;
+  width: 38.1vw;
+  border: solid white 1px;
 }
 
 /* Grow animation */
@@ -40,4 +49,20 @@ as some of the photos from the API are portait rather than landscape*/
   0% {width: 19vw; height: 25vh;}
   50% {width: 47vw; height: 70vh;}
   100% {width: 38vw; height: 50vh;}
+}
+
+.type1 {
+  background: red;
+}
+
+.type2 {
+  background: blue;
+}
+
+.type3 {
+  background: green;
+}
+
+.type4 {
+  background: yellow;
 }
