@@ -1,8 +1,7 @@
 /* Scales images to fit their container based on width alone */
 img {
   max-width: 100% !important;
-  max-height: auto !important;
-  object-fit: cover;
+  max-height: auto;
 }
 
 /* This keeps the images from distorting the interface with the height ratio, 
@@ -11,33 +10,43 @@ as some of the photos from the API are portait rather than landscape*/
   overflow: hidden;
 }
 
+/* This is hacky, but images would not fill in from the left, so I added a
+  background beneath the divs so that there would be no empty space in the grid*/
+html {
+  background-image: url('./lifehacks.jpg');
+  background-size: cover;
+}
+
 /*container for images*/
 .row {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  max-height: 50vh;
-  max-width: 100vw;
+  height: 50vh;
+  width: 100vw;
+  z-index: 0;
 }
 
 .images {
   height: 25vh;
-  width: 15vw;
-  transition: 1s;
+  width: 19vw;
+  transition: width 1s, height 1s;
   animation-duration: 2s;
+  z-index: 0 !important;
 }
 
 /* Hover animation */
 .hovered {
+  min-height: 50vh !important;
+  width: 38vw;
   animation-name: grow;
-  animation-duration: 1s;
-  width: 30vw;
-  height: 50vh;
+  animation-duration: 2s;
+  z-index: 1;
 }
 
 /* Grow animation */
 @keyframes grow {
-  0% {width: 16.66vw; height: 25vh; z-index: 1;}
-  50% {width: 35vw; height: 55vh; z-index: 1;}
-  100% {width: 30vw; height: 50vh; z-index: 1;}
+  0% {width: 19vw; height: 25vh; z-index: 1}
+  50% {width: 47vw; height: 70vh; z-index: 1}
+  100% {width: 38vw; height: 50vh; z-index: 1}
 }

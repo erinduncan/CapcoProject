@@ -2,9 +2,9 @@ import React from "react";
 import "./App.css";
 import Image from "./layout-components/Image";
 import { imageAPI } from "./utility/api";
-import Amplify from 'aws-amplify';
-import awsmobile from './aws-exports';
-Amplify.configure(awsmobile);
+// import Amplify from 'aws-amplify';
+// import awsmobile from './aws-exports';
+// Amplify.configure(awsmobile);
 
 /* This is the function to randomize the background color of each tile,
   once/if I switch to transparent pngs*/
@@ -52,7 +52,7 @@ class AppComponent extends React.Component<any, any> {
     let row2 = [];
     for (let index = 0; index < length; index++) {
       const element = index;
-      if (element < 13) {
+      if (element < 12) {
         row1.push(this.state.photos[element]);
       } else {
         row2.push(this.state.photos[element]);
@@ -71,7 +71,6 @@ class AppComponent extends React.Component<any, any> {
               key={photo.id}
               id={photo.id}
               image={photo.download_url}
-              onHover={this.props.hover}
             />
           ))}
         </div>
@@ -81,7 +80,6 @@ class AppComponent extends React.Component<any, any> {
               key={photo.id}
               id={photo.id}
               image={photo.download_url}
-              onHover={this.props.hover}
             />
           ))}
         </div>
