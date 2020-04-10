@@ -51,7 +51,7 @@ export class Image extends React.Component<any, any> {
         className="images"
         onMouseEnter={() => this.onHover(this.props.id)}
       >
-        <img src={this.props.image} alt="IMG" />
+        <img className="tile" src={this.props.image} alt="IMG" />
       </div>
     );
   }
