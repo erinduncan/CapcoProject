@@ -52,7 +52,7 @@ class AppComponent extends React.Component<any, any> {
     let row2 = [];
     for (let index = 0; index < length; index++) {
       const element = index;
-      if (element < 13) {
+      if (element < 12) {
         row1.push(this.state.photos[element]);
       } else {
         row2.push(this.state.photos[element]);
@@ -71,7 +71,6 @@ class AppComponent extends React.Component<any, any> {
               key={photo.id}
               id={photo.id}
               image={photo.download_url}
-              onHover={this.props.hover}
             />
           ))}
         </div>
@@ -81,7 +80,6 @@ class AppComponent extends React.Component<any, any> {
               key={photo.id}
               id={photo.id}
               image={photo.download_url}
-              onHover={this.props.hover}
             />
           ))}
         </div>
