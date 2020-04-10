@@ -23,5 +23,5 @@ Images are obtained through an Axios request to a JSON file within the applicati
 * Some of the animations snap back to place rather than making a smooth transition; moving forward I would provide a few more keyframes that would account for several movement patterns.
 
 <p align="center">
-<img src="http://pngimg.com/uploads/cat/cat_PNG50526.png)"/>
+<img src="http://pngimg.com/uploads/cat/cat_PNG50526.png"/>
   </p>
