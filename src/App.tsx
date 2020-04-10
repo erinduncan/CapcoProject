@@ -37,7 +37,7 @@ class AppComponent extends React.Component<any, any> {
     let row2 = [];
     for (let index = 0; index < length; index++) {
       const element = index;
-      if (element < 12) {
+      if (element < 11) {
         row1.push(this.state.photos[element]);
       } else {
         row2.push(this.state.photos[element]);
