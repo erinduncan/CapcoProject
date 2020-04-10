@@ -1,6 +1,6 @@
 # Capco Project
 
-This application displays images that dynamically resize when hovered over, while other images shift to fill the empty space.
+This application displays images that dynamically resize and change color when hovered over, while the surrounding images shift to fill the empty space. 
 
 [Dynamic Images Application](https://erin.d1t42uonzvpaf2.amplifyapp.com/)
 
@@ -13,3 +13,4 @@ This application displays images that dynamically resize when hovered over, whil
 * Cypress (Currently troubleshooting)
 
 # Moving Forward
+

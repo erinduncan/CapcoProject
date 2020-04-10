@@ -10,11 +10,6 @@ function RandomColor() {
   return rc;
 }
 
-//eslint-disable-next-line
-const styles = {
-  backgroundColor: RandomColor(),
-};
-
 function setColor(element: any, color: any) {
   element.style.backgroundColor = color;
 }
@@ -30,7 +25,6 @@ export class Image extends React.Component<any, any> {
   onHover = (id: any) => {
     const thisElement = document.getElementById(id);
     let element;
-    const hoveredElement = document.getElementsByClassName("hovered");
 
     if (thisElement != null) {
       element = document.getElementsByClassName("images");
@@ -38,10 +32,18 @@ export class Image extends React.Component<any, any> {
         image.classList.remove("hovered");
         setColor(thisElement, RandomColor());
       });
-      // setColor(thisElement, "lightgray");
       thisElement.classList.add("hovered");
     }
   };
+
+  onLeave = (id:any) => {
+    const thisElement = document.getElementById(id);
+
+    if (thisElement != null) {
+        setColor(thisElement, 'lightgray');
+    }
+  };
+  
 
   render() {
     return (
@@ -50,6 +52,7 @@ export class Image extends React.Component<any, any> {
         id={this.props.id}
         className="images"
         onMouseEnter={() => this.onHover(this.props.id)}
+        onMouseLeave={() => this.onLeave(this.props.id)}
       >
         <img className="tile" src={this.props.image} alt="IMG" />
       </div>
