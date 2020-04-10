@@ -2,18 +2,22 @@ import React from "react";
 
 /* This is the function to randomize the background color of each tile,
   once/if I switch to transparent pngs*/
-  function RandomColor() {
-    let rc = "#";
-    for (let index = 0; index < 6; index++) {
-      rc += Math.floor(Math.random() * 16).toString(16);
-    }
-    return rc;
+function RandomColor() {
+  let rc = "#";
+  for (let index = 0; index < 6; index++) {
+    rc += Math.floor(Math.random() * 16).toString(16);
   }
-  
-  //eslint-disable-next-line
-  const styles = {
-    backgroundColor: RandomColor(),
-  };
+  return rc;
+}
+
+//eslint-disable-next-line
+const styles = {
+  backgroundColor: RandomColor(),
+};
+
+function setColor(element: any, color: any) {
+  element.style.backgroundColor = color;
+}
 
 export class Image extends React.Component<any, any> {
   constructor(props: any) {
@@ -26,14 +30,15 @@ export class Image extends React.Component<any, any> {
   onHover = (id: any) => {
     const thisElement = document.getElementById(id);
     let element;
-    
+    const hoveredElement = document.getElementsByClassName("hovered");
+
     if (thisElement != null) {
       element = document.getElementsByClassName("images");
       [].forEach.call(element, (image: any) => {
         image.classList.remove("hovered");
-        console.log(document.body.style.backgroundColor);
-        image.style.backgroundColor = RandomColor();
+        setColor(thisElement, RandomColor());
       });
+      // setColor(thisElement, "lightgray");
       thisElement.classList.add("hovered");
     }
   };
