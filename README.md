@@ -2,7 +2,7 @@
 
 This application displays images that dynamically resize and change color when hovered over, while the surrounding images shift to fill the empty space. 
 
-[Dynamic Images Application](https://erin.d1t42uonzvpaf2.amplifyapp.com/)
+[Dynamic Images Application](https://master.d2bz23ata94hv0.amplifyapp.com/)
 
 # Technologies
 
