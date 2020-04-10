@@ -20,6 +20,7 @@ class AppComponent extends React.Component<any, any> {
     this.getPhotos();
   }
 
+  // API call
   getPhotos = () => {
     imageAPI({}).then((res) => {
       this.setState({ photos: res.data });
